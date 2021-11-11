@@ -118,8 +118,8 @@ console.log(typeof cp);
 // - Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
     let str = "20";
 let a = 5;
-document.write(str + a + "<br/>");////205  бо якщо дія з стрічкою, то все стає стрічкою /// або тільки тут 205, потім 15,40,15
-document.write(str - a + "<br/>");//205
-document.write(str * "2" + "<br/>");//205
-document.write(str / 2 + "<br/>");//205
-console.log(str - a + "<br/>");//205
+document.write(str + a + "<br/>");////205  бо якщо дія з стрічкою, то все стає стрічкою /// або тільки тут 205, потім 15,40,15  ''
+document.write(str - a + "<br/>");//205  і щось підказуює що тут має бути ''
+document.write(str * "2" + "<br/>");//205             ''
+document.write(str / 2 + "<br/>");//205                ''
+console.log(str - a + "<br/>");//205                     ''
