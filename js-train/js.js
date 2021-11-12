@@ -122,5 +122,5 @@ document.write(str + ao + "<br/>");////205  бо якщо дія з стрічк
 document.write(str - ao + "<br/>");//205  і щось підказуює що тут має бути
 document.write(str * "2" + "<br/>");//205
 document.write(str / 2 + "<br/>");//205
-console.log(str - ao + "<br/>");//205
+
 
