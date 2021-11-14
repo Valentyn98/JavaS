@@ -47,7 +47,7 @@ switch (number) {
         console.log("study");
         break;
     case 3:
-        console.log("stady and work");
+        console.log("study and work");
         break;
 }
 //6 - Потрібно визначити Високосний рік чи ні. Високосні роки діляться націло на 4.
@@ -172,9 +172,16 @@ if(friends.length >= 3){
 
 // - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
 //     Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
-
-
-
+let num1 =1;
+let num2 =25;
+let num3 =9;
+if(num1 > num2 && num1 < num3 ){
+    console.log(`${num1}`);
+}else if( num2>num1 && num2<num3){
+    console.log(`${num2}`);
+}else if(num3>num1 && num3<num2 ){
+    console.log(`${num3}`);
+}
 
 
 
@@ -197,8 +204,5 @@ ap + bp < 4 ? console.log('Мало') : console.log('Багато');
 // - Маємо будь яке число від -100 , 0 , +100 потрібно перевірити яким є число: позитивним, негативним або нулем
 // напишіть це тернарним оператором
 
-let minuus = -100;
-let pluus = 100
-let pluusminuus = 0;
-
-if ()
+let numnum = prompt('Введите ваше число?');
+numnum < 0 ? document.write('негативне') : numnum = 0 ? document.write('нуль'):document.write('позитивним');
