@@ -172,14 +172,14 @@ if(friends.length >= 3){
 
 // - Маємо 3 числа і між ним  нам потрібно знайти те що посередині.
 //     Знайти, яке з них є середнім (більше одного, але менше за інше). Перевірити, чи знаходиться перше число між двома іншими.
-let num1 =1;
-let num2 =25;
-let num3 =9;
-if(num1 > num2 && num1 < num3 ){
+let num1 =5;
+let num2 =20;
+let num3 =1;
+if(num1 > num2 && num1 < num3 || num1 < num2 && num1 > num3 ){
     console.log(`${num1}`);
-}else if( num2>num1 && num2<num3){
+}else if( num2>num1 && num2<num3 || num2>num3 && num2<num1 ){
     console.log(`${num2}`);
-}else if(num3>num1 && num3<num2 ){
+}else if(num3>num1 && num3<num2 || num3>num2 && num3<num1 ){
     console.log(`${num3}`);
 }
 
