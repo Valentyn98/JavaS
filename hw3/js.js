@@ -291,7 +291,7 @@ document.write(`<div class="simiki">
       ${simpsons[op].surname}
       ${simpsons[op].age}
       ${simpsons[op].info}
-      <img src="${simpsons[op].photo}">
+      <img src="${simpsons[op].photo}" class="photo">
       `)
 }
 /*
