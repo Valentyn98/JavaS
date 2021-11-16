@@ -10,12 +10,16 @@ console.log(www);
 //****************************
 //-- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
 let wempty = ['empty',345,'noempty',678,8910];
-console.log(wempty[2]);
+wempty [0] = 'empty';
+wempty [1] =345;
+wempty [2] =  'noempty';
+console.log(wempty);
 //****************************
 // - За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом всередині
 for ( let i = 0; i < 10; i ++){
     document.write(`<div>asdasd</div> `);
 }
+
 //- За допомогою циклу for і document.write() вивести 10 блоків div c довільним текстом і індексом всередині
 for ( let i = 1; i < 11; i ++){
     document.write(`<div>asdasd ${i}</div>` );
@@ -151,14 +155,16 @@ for ( let n = 0; n < masik5.length; n++){
 let masik6 = [2,17,13,6,22,31,45,66,100,-18];
 for ( let q = 0; q < masik6.length; q++){
     if ( masik6[q] % 3 === 0){
+        masik6[q]='okten';
+        document.write(`<div class="col_red">${masik6} </div>`);
 
-        document.write(`<div class="col_red">${masik6[q]} </div>`);
+
     }
-
 }
 
-
 //8. вивести масив в зворотньому порядку.
-
-
+let masik7 = [2,17,13,6,22,31,45,66,100,-18];
+for ( let op = masik7.length; op>=0; op--){
+    console.log(masik7[op]);
+}
 //9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
