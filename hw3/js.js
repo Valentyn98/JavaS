@@ -84,19 +84,81 @@ for ( let i= 0; i < 10; i++){
 }
 //- Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
 for ( let i =0; i < 100; i++){
-    document.write(`<div>${[i]} </div>`);
+    document.write(`<div class="col_red">${[i]} </div>`);
 }
 //- Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
 for ( let i =0; i < 100; i+=2){
-    document.write(`<div>${[i]} </div>`);
+    document.write(`<div class="col_yell">${[i]} </div>`);
 }
 //- Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
 for ( let i =0; i < 100; i+=2){
-    document.write(`<div>${[i]} </div>`);
+    document.write(`<div class="col_pink">${[i]} </div>`);
     console.log(i);
 }
 //- Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
 for ( let i =0; i < 100; i+=3){
-    document.write(`<div>${[i]} </div>`);
+    document.write(`<div class="col_green">${[i]} </div>`);
     console.log(i);
 }
+//****************************************CW*******************
+//1. перебрати його циклом while
+let masik = [2,17,13,6,22,31,45,66,100,-18];
+let ioi = 0
+while ( ioi < masik.length){
+    console.log(masik[ioi]);
+
+    ioi++;
+}
+//2. перебрати його циклом for
+let masik1 = [2,17,13,6,22,31,45,66,100,-18];
+for (let ig = 0; ig < masik1.length; ig++){
+        document.write(`<div class="col_p">${masik1[ig]} </div>`);
+}
+
+//3. перебрати циклом while та вивести  числа тільки з непарним індексом
+let masik2 = [2,17,13,6,22,31,45,66,100,-18];
+let hu = 0;
+while ( hu < masik2.length){
+if(hu % 2 !== 0) {
+    document.write(`<div class="col_green">${hu} </div>`);
+}
+hu++;
+}
+//4. перебрати циклом for та вивести  числа тільки з непарним індексом
+let masik3 = [2,17,13,6,22,31,45,66,100,-18];
+for ( let ih = 0; ih < masik3.length; ih++){
+    if(ih % 2 !== 0){
+        document.write(`<div>${ih} </div>`);
+    }
+}
+//5. перебрати циклом while та вивести  числа тільки парні  значення
+let masik4 = [2,17,13,6,22,31,45,66,100,-18];
+let p = 0;
+while ( p < masik4.length){
+    if(masik4[p] % 2 ===0){
+    document.write(`<div class="col_red">${masik4[p]}</div>`)
+    }
+    p++;
+}
+//6. перебрати циклом for та вивести  числа тільки парні  значення
+let masik5 = [2,17,13,6,22,31,45,66,100,-18];
+for ( let n = 0; n < masik5.length; n++){
+    if(masik5[n] % 2 === 0){
+        document.write(`<div class="col_green">${masik5[n]} </div>`)
+    }
+}
+//7. замінити кожне число кратне 3 на слово "okten"
+let masik6 = [2,17,13,6,22,31,45,66,100,-18];
+for ( let q = 0; q < masik6.length; q++){
+    if ( masik6[q] % 3 === 0){
+
+        document.write(`<div class="col_red">${masik6[q]} </div>`);
+    }
+
+}
+
+
+//8. вивести масив в зворотньому порядку.
+
+
+//9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
