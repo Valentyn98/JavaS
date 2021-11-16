@@ -178,8 +178,52 @@ while ( ioii >= 0 ){
     console.log(masikk[ioii]);
     ioii--;
 }
-//2. перебрати його циклом for
+//. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+//9.2. перебрати його циклом for
 let masikk1 = [2,17,13,6,22,31,45,66,100,-18];
 for (let ig = masikk1.length-1; ig >=0; ig--){
     document.write(`<div class="col_p">${masikk1[ig]} </div>`);
+}
+
+// 9.3. перебрати циклом while та вивести  числа тільки з непарним індексом
+let masikk2 = [2,17,13,6,22,31,45,66,100,-18];
+let huu = masikk2.length;
+while (huu >= 0){
+    if(huu % 2 !== 0) {
+        document.write(`<div class="col_green">${huu} </div>`);
+    }
+    huu--;
+}
+//9.4 перебрати циклом for та вивести  числа тільки з непарним індексом
+let masikk3 = [2,17,13,6,22,31,45,66,100,-18];
+for ( let ih = masikk3.length; ih>=0; ih--){
+    if(ih % 2 !== 0){
+        document.write(`<div>${ih} </div>`);
+    }
+}
+//9.5. перебрати циклом while та вивести  числа тільки парні  значення
+let masikk4 = [2,17,13,6,22,31,45,66,100,-18];
+let p1 =  masikk4.length;
+while ( p1 >=0){
+    if(masikk4[p1] % 2 ===0){
+        document.write(`<div class="col_red">${masikk4[p1]}</div>`)
+    }
+    p1--;
+}
+//9.6. перебрати циклом for та вивести  числа тільки парні  значення
+let masikk5 = [2,17,13,6,22,31,45,66,100,-18];
+for ( let n = masikk5.length; n>=0; n--){
+    if(masikk5[n] % 2 === 0){
+        document.write(`<div class="col_green">${masikk5[n]} </div>`)
+    }
+}
+//9.7. замінити кожне число кратне 3 на слово "okten"
+let masikk6 = [2,17,13,6,22,31,45,66,100,-18];
+for ( let q = masikk6.length; q>=0; q--){
+    if ( masikk6[q] % 3 === 0){
+        masikk6[q]='okten';
+        document.write(`<div class="col_red">${masikk6} </div>`);
+
+
+    }
 }
