@@ -295,30 +295,6 @@ document.write(`<div class="simiki">
       `)
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
 Використовуючи данні з масиву, за допомоги document.write та циклу
 побудувати структуру по шаблону template3.1 Зробити адекватну стилізацію
@@ -349,7 +325,8 @@ let products = [
 for ( let kk =0; kk < products.length; kk++){
     document.write(`<div class="bck">
                     <div class="tt">${products[kk].title}</div>
-                    ${products[kk].price}
-                    <img src="${products[kk].image}" class="milk_p">
-`)
+                    <div class="ppp">${products[kk].price}</div>
+                   <div><img src="${products[kk].image}" class="milk_p"></div>
+
+</div>`)
 }
