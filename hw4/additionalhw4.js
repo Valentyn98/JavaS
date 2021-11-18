@@ -34,3 +34,16 @@ function peps (masuv){
     document.write(`${key}`)
 }
 peps (m)
+// - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
+// EXAMPLE:
+//     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry
+let nelastmas =[{name: 'Dima', age: 13}, {model: 'Camry'}];
+let lastmas = [];
+function last (mm){
+    let ravno = Object.values(mm)
+        for ( let i=0; i< mm.length; i++){
+
+
+
+}
+last (nelastmas)
