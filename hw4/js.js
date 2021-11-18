@@ -165,7 +165,7 @@ let mamasik3 = [22,12,5,11,2];
 function serednye (){
     let it = 0;
     for( let i = 0; i < mamasik3.length; i++){
-      it +=mamasik3[i] / mamasik3.length; ;
+      it +=mamasik3[i] / mamasik3.length;
     }
     document.write(`<div> ${it}</div>`)
     return it;
@@ -188,6 +188,7 @@ function  chisla (){
     return miin;
 }
 chisla ()
+
 //8 - створити функцію яка заповнює масив рандомними числами
 // (цей код генерує рандомні числа в діапазоні від 0 до 100 - Math.round(Math.random()*100)) та виводить його.
 let mamasik5 = [];
