@@ -220,3 +220,6 @@ function reverse (a){
     console.log(mamasik8)
 }
 reverse (mamasik7)
+
+
+

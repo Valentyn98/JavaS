@@ -27,23 +27,16 @@ sumas (testarrone,testarrtwo)
 //- Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 //   EXAMPLE:
 //   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
+
 let m =[{name: 'Dima', age: 13}, {model: 'Camry'}];
-let s =[];
-function peps (masuv){
-    let key = Object.keys(masuv)
-    document.write(`${key}`)
+function peps (){
+    let skey =[];
+    for ( let i = 0; i< m.length; i++){
+        let fi = m[i];
+        for( let ko in fi){
+            skey.push(ko);
+        }
+    }
+ console.log(skey)
 }
-peps (m)
-// - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
-// EXAMPLE:
-//     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry
-let nelastmas =[{name: 'Dima', age: 13}, {model: 'Camry'}];
-let lastmas = [];
-function last (mm){
-    let ravno = Object.values(mm)
-        for ( let i=0; i< mm.length; i++){
-
-
-
-}
-last (nelastmas)
+peps ()
