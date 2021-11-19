@@ -27,7 +27,6 @@ sumas (testarrone,testarrtwo)
 //- Створити функцію яка приймає масив будь яких объектів, та повертає масив ключів всіх обєктів
 //   EXAMPLE:
 //   [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ name, age, model ]
-
 let m =[{name: 'Dima', age: 13}, {model: 'Camry'}];
 function peps (){
     let skey =[];
@@ -40,3 +39,18 @@ function peps (){
  console.log(skey)
 }
 peps ()
+// - Створити функцію яка приймає масив будь яких объектів, та повертає масив значень всіх обєктів
+// EXAMPLE:
+//     [{name: 'Dima', age: 13}, {model: 'Camry'}]  ===> [ Dima, 13, Camry ]
+
+let m1 =[{name: 'Dima', age: 13}, {model: 'Camry'}];
+let des = []
+function takearr (){
+ for (const types of m1){
+      for (const ftypes in  types){
+          des.push(types[ftypes])
+      }
+ }
+ console.log(des)
+}
+takearr ()
