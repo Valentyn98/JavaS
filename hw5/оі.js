@@ -15,10 +15,74 @@
 //   1  - створити функцію яка обчислює та повертає площу прямокутника висотою 20
 let a = 20;
 let b = 10;
-let plosg = (a,b) => {console.log(a*b);}
+let plosg = (a,b) => {console.log(a*b);} // Ббільш скорочений варіант ---- a*b; -__--- не спрацював
 plosg(a,b)
 // 2 - створити функцію яка обчислює та повертає площу кола
- let p = Math.PI;
+let p = Math.PI;
 let r = Math.pow(5,2)
 let rc = (p,r) => {console.log(p*r);}
 rc(p,r)
+// 3 - створити функцію яка обчислює та повертає площу циліндру
+let ra = 10;
+let he = 20;
+let pc = (p,ra,he)=>{
+let cul = p * 2 * ra * he;
+console.log(cul);
+// return cul;
+}
+pc(p,ra,he)
+// 4 - створити функцію яка приймає масив та виводить кожен його елемент
+let arr = [1,2,3,4,5, 'asda',!!'1231']
+let farr = () =>{
+ for( const key of arr){
+  console.log(key);
+ }
+}
+farr();
+// 5 - створити функцію яка  створює параграф з текстом. Текст задати через аргумент
+let text = "wasdas"
+let pt = (text) =>{
+ document.write(`<p>${text}</p>`)
+}
+pt(text);
+// 6 - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
+let ui = () =>{
+ // document.write(`<ul>`)
+ // document.write(`<li>${text}</li>`)
+ // document.write(`</ul>`)
+//2 варіант
+ document.write(`<ul>`)
+ for (let i = 0; i < 3; i++){
+  document.write(`<li>${text}</li>`)
+ }
+ document.write(`</ul>`)
+}
+ui(text)
+// 7 - створити функцію яка  створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий. Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
+let limit = 3;
+let uo = (text,limit) =>{
+ document.write(`<ul>`)
+ for (let i = 0; i <limit ; i++){
+  document.write(`<li>${text}</li>`)
+ }
+ document.write(`</ul>`)
+}
+uo(text,limit)
+// 8 - створити функцію яка приймає масив примітивних елементів (числа,стрінги,булеві), та будує для них список
+let arrp = [1,2,3,4,5, 'asda',!!'1231']
+let prel = () =>{
+ document.write(`<ul>`)
+ for (const mas of arrp){
+  document.write(`<li>${arrp}</li>`)
+ }
+ document.write(`</ul>`)
+}
+prel ()
+// 9 - створити функцію яка приймає масив об'єктів з наступними полями id,name,age , та виводить їх в документ. Для кожного об'єкту окремий блок.
+let masik = [{id: 'lolo',name: 'valy', age:22 },{id: 'lolo',name: 'valy', age:22 },{id: 'lolo',name: 'valy', age:22 }];
+let last  =()=>{
+for ( let i = 0; i < masik.length; i++){
+ document.write(`<div>${masik[i].id} ${masik[i].name} ${masik[i].age} </div>`)
+}
+}
+last  ()
