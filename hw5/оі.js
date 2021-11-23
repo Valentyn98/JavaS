@@ -33,12 +33,12 @@ console.log(cul);
 pc(p,ra,he)
 // 4 - створити функцію яка приймає масив та виводить кожен його елемент
 let arr = [1,2,3,4,5, 'asda',!!'1231']
-let farr = () =>{
+let farr = (arr ) =>{
  for( const key of arr){
   console.log(key);
  }
 }
-farr();
+farr(arr );
 // 5 - створити функцію яка  створює параграф з текстом. Текст задати через аргумент
 let text = "wasdas"
 let pt = (text) =>{
@@ -122,28 +122,28 @@ let fmax = (n1,n2,n3) => {
 fmax  (1,2,3)
 // 3- створити функцію яка повертає найбільше число з масиву
 let arrm = [1,2,3,4,5];
-let farrma = () => {
- let  o = arrm[0]
- for (let max of arrm){
+let farrma = (wiy) => {
+ let  o = wiy[0]
+ for (let max of wiy){
   if (max> o){
    o = max;
   }
  }
  document.write(`${o}`)
 }
-farrma ()
+farrma (arrm)
 // 4 - створити функцію яка повертає найменьше число з масиву
 let arrm1 = [1,2,3,4,5];
-let farrmi = () => {
- let mi = arrm[0];
- for ( let min of arrm1 ){
+let farrmi = (tyty) => {
+ let mi = tyty[0];
+ for ( let min of tyty ){
   if ( min < mi){
    mi = min;
   }
  }
  document.write(`<div>${mi}</div>`)
 }
-farrmi ()
+farrmi (arrm1)
 // 5 - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
 let arrm2 = [1,2,3,4,5];
 let j=0;
@@ -182,8 +182,8 @@ return minc;
 }
 mima(mamasik4)
 // 8 - створити функцію яка заповнює масив рандомними числами
-let arr4 = [];
 let arrpp= () => {
+ let arr4 = [];
  for (let i = 0; i < 10; i++) {
   arr4.push(Math.floor(Math.random() * 10));
 
@@ -225,18 +225,17 @@ natural (n)
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
 let aa = 20;
-let bb = 33;
+let bb = 10;
 let map = (aa,bb) => {
-
- if ( aa>bb){
-  for (let i= aa; i <=bb; i++){
-   console.log(i);
-  }
- }else if(aa<bb){
-  for (let i= bb; i>=a; i--){
-   console.log(i);
-  }
+if (bb < aa){
+ for (let i = bb; i <= aa; i++){
+  console.log(i)
  }
+}else if (aa < bb){
+ for ( let i = bb; i >= aa; i--){
+  console.log(i)
+ }
+}
 }
 map(aa,bb)
 
@@ -248,11 +247,19 @@ map(aa,bb)
 //   foo([9,8,0,4], 1) // ==> [ 9 ,0, 8, 4 ]
 //   foo([9,8,0,4], 2) // ==> [ 9, 8, 4, 0 ]
 //
+let i = 0;
+let arri = [9,8,0,4]
+let f = (arri,i ) => {
+ for (let j = 0; j < arri.length; j++) {
+  if (j === i){
+   let number = arri[j]
+   arr[j] = arr[j] + 1;
 
-let f = () =>{
-
+  }
+ }
 }
-f  ([9,8,0,4], 0)
+f  (arri,i)
+
 // - Сворити функцію яка буде переносити елементи з значенням 0 у кінець маисву. Зберігаючи при цьому порядок не нульових значень.
 // Двожина масиву від 2 до 100
 // EXAMPLE:
