@@ -224,7 +224,21 @@ let natural = (n) =>{
 natural (n)
 
 // - Даны два целых числа A и В . Выведите все числа от A до B включительно, в порядке возрастания, если A < B, или в порядке убывания в противном случае.
+let aa = 20;
+let bb = 33;
+let map = (aa,bb) => {
 
+ if ( aa>bb){
+  for (let i= aa; i <=bb; i++){
+   console.log(i);
+  }
+ }else if(aa<bb){
+  for (let i= bb; i>=a; i--){
+   console.log(i);
+  }
+ }
+}
+map(aa,bb)
 
 
 
