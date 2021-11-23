@@ -86,3 +86,135 @@ for ( let i = 0; i < masik.length; i++){
 }
 }
 last  ()
+
+// ****************************************cw**********************************?
+
+
+
+
+
+
+
+//  1 - створити функцію яка приймає три числа та виводить найменьше. (Без Math.min!)
+
+let fmin = (n1,n2,n3) => {
+ for( let i = 0; i < 1; i ++){
+  if ( n1 < n2 && n1 < n3  ){
+   document.write(`<div> ${n1}</div>`);
+  }else if ( n2 < n1 && n2 < n3 ){
+   document.write(`<div> ${n2}</div>`);
+  }else if ( n3 < n1 && n3 < n2){
+   document.write(`<div> ${n3}</div>`);
+  }else {
+   document.write(`<div> ${'!! 404'}</div>`);
+  }
+ }
+}
+fmin  (1,2,3)
+// 2 - створити функцію яка приймає три числа та виводить найбільше. (Без Math.max!)
+let fmax = (n1,n2,n3) => {
+ for( let i = 0; i < 1; i ++){
+  if ( n1 > n2 && n1 > n3  ){
+   document.write(`<div> ${n1}</div>`);
+  }else if ( n2 > n1 && n2 > n3 ){
+   document.write(`<div> ${n2}</div>`);
+  }else if ( n3 > n1 && n3 > n2){
+   document.write(`<div> ${n3}</div>`);
+  }else {
+   document.write(`<div> ${'!! 404'}</div>`);
+  }
+ }
+}
+fmax  (1,2,3)
+// 3- створити функцію яка повертає найбільше число з масиву
+let arrm = [1,2,3,4,5];
+let farrma = () => {
+ let  o = arrm[0]
+ for (let max of arrm){
+  if (max> o){
+   o = max;
+  }
+ }
+ document.write(`${o}`)
+}
+farrma ()
+// 4 - створити функцію яка повертає найменьше число з масиву
+let arrm1 = [1,2,3,4,5];
+let farrmi = () => {
+ let mi = arrm[0];
+ for ( let min of arrm1 ){
+  if ( min < mi){
+   mi = min;
+  }
+ }
+ document.write(`<div>${mi}</div>`)
+}
+farrmi ()
+// 5 - створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його. Приклад [1,2,10]->13
+let arrm2 = [1,2,3,4,5];
+let j=0;
+let fmar = () =>{
+ for (let i = 0; i < arrm2.length; i++){
+  j = j + arrm2[i];
+ }
+ console.log(j);
+}
+fmar  ()
+// 6 - створити функцію яка приймає масив чисел та повертає середнє арифметичне його значень.
+let arrm3 = [1,2,3,4,5];
+let s = 0;
+let ser = (arrm3) => {
+ for (let i = 0; i < arrm3.length; i++){
+
+ s += arrm3[i]/arrm3.length;
+ }
+ console.log(s)
+}
+ser (arrm3)
+//// 7 - створити функцію яка приймає будь-яку кількість чисел, повертає найменьше, а виводить найбільше (Math використовувати заборонено);
+let mamasik4 = [22,12,5,11,2];
+let mima = (mamasik4) =>{
+  let maxc = mamasik4[0];
+  let minc =mamasik4[0];
+ for ( const chislo of mamasik4){
+  if (chislo > maxc ){
+   maxc = chislo;
+  } else if ( chislo < minc){
+   minc = chislo;
+  }
+ }
+ console.log(maxc)
+return minc;
+}
+mima(mamasik4)
+// 8 - створити функцію яка заповнює масив рандомними числами
+let arr4 = [];
+let arrpp= () => {
+ for (let i = 0; i < 10; i++) {
+  arr4.push(Math.floor(Math.random() * 10));
+
+ }
+ console.log(arr4)
+}
+arrpp()
+// 9 - створити функцію яка заповнює масив рандомними числами в діапазоні від 0 до limit. limit - аргумент, який характеризує кінцеве значення діапазону.
+let arr5 = [];
+let liimit = 10;
+let arp= (limit) => {
+ for (let i = 0; i < 10; i++) {
+  arr5.push(Math.floor(Math.random() * 10));
+
+ }
+ console.log(arr5)
+}
+arp(liimit)
+let m1 = [1,2,3,4,5,6,7];
+let rev = [];
+// 10 - Функція приймає масив та робить з нього новий масив в зворотньому порядку. [1,2,3] -> [3, 2, 1].
+let reverse = () =>{
+ for (let i = m1.length-1; i >= 0; i--){
+  rev.push(m1[i])
+ }
+ console.log(rev)
+}
+reverse  ()
