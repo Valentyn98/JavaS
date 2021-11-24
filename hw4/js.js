@@ -9,8 +9,8 @@ pryamok(5,3);
 //2- створити функцію яка обчислює та повертає площу кола з радіусом r
 function kolo (ra){
  let kol = Math.PI * Math.pow(ra,2);
- return kol;
- // console.log(kol);
+ // return kol;
+ console.log(kol);
 }
 kolo (5);
 //3- створити функцію яка обчислює та повертає площу циліндру висотою h, та радіутом r
