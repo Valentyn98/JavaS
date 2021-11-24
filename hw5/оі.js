@@ -268,6 +268,19 @@ let swap = (arrr,i) => {
 console.log(arrr[i])
 swap  ([9,8,0,4], 0)
 
+let swap = (arr,i) => {
+for (let i = 0; i < arr.length; i++){
+ let qq;
+ qq= arr[i];
+ arr[i] = arr[i+1];
+ arr[i+1]=qq;
+
+}
+
+}
+console.log(arr[i])
+swap  ([9,8,0,4], 0)
+
 
 
 
