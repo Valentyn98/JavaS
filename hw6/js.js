@@ -115,12 +115,42 @@ let first_register = (i) =>{
 
 }
 document.writeln(first_register(i))
-
+//
 // 9 - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
+//let te = 'top bot mid';
+// let capitalize = (str) => {
+//     return str.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
+// };
+// document.write(capitalize('top bot mid'));
 
-let capitalize = (str) => {
-    return str.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
-};
-document.write(capitalize('top bot mid'));
+
+
+// другий вар рішення
+let te = 'top bot mid';
+ let func = (te) =>{
+     let arr = te.split(' ');
+     for( let i = 0; i < arr.length; i++){
+         let newI = arr[i].split('');
+         newI[0] = newI[0].toUpperCase();
+         arr[i] = newI.join('');
+     }
+     return arr.join(' ');
+ };
+console.log(func(te));
+
+
+
+
+
+***********************************************CW****CW******CW*****************************************
+// - Дано список імен.
+//     let n1 = 'Harry..Potter'
+// let n2 = 'Ron---Whisley'
+// let n3 = 'Hermione__Granger'
+// Написати функцію, яка приймає будь яке не валідне імя, та нормалізує його в наступнйи вигляд
+// let n1 = 'Harry Potter'
+// let n2 = 'Ron Whisley'
+// let n3 = 'Hermione Granger'
+
 
 
