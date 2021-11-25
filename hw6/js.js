@@ -119,6 +119,8 @@ document.writeln(first_register(i))
 // 9 - Напишіть функцію capitalize(str), яка повертає рядок, у якому кожне слово починається з великої літери.
 
 let capitalize = (str) => {
-    return str.split(' ').map(word=>word.charAt(0).toUpperCase()+word.slice(1)).join(' ');
+    return str.split(' ').map(w=>w.charAt(0).toUpperCase()+w.slice(1)).join(' ');
 };
 document.write(capitalize('top bot mid'));
+
+
