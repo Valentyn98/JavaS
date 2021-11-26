@@ -186,19 +186,27 @@ let es = param.map =(b) => {return b + ''}; // не знаю сработает 
 
 
 // 6- створити функцію sortNums(direction), яка прймає масив чисел, та сортує його від більшого до меньшого, або навпаки в залежності від значення аргументу direction.
-//     let nums = [11,21,3];
-// sortNums('ascending') // [3,11,21]
-// sortNums('descending') // [21,11,3]
-//
-//
+let sortNums = (arir,direction)=>{
+    if (direction === 0){ return arir.sort((b,a) => (a - b))}
+    else if(direction === 1){ return arir.sort((b,a) => (b - a))}
+}
+console.log(sortNums ([3,11,21],0))
 // 7- є масив
-// let coursesAndDurationArray = [
-//     {title: 'JavaScript Complex', monthDuration: 5},
-//     {title: 'Java Complex', monthDuration: 6},
-//     {title: 'Python Complex', monthDuration: 6},
-//     {title: 'QA Complex', monthDuration: 4},
-//     {title: 'FullStack', monthDuration: 7},
-//     {title: 'Frontend', monthDuration: 4}
-// ];
+let coursesAndDurationArray = [
+    {title: 'JavaScript Complex', monthDuration: 5},
+    {title: 'Java Complex', monthDuration: 6},
+    {title: 'Python Complex', monthDuration: 6},
+    {title: 'QA Complex', monthDuration: 4},
+    {title: 'FullStack', monthDuration: 7},
+    {title: 'Frontend', monthDuration: 4}
+];
+
 // -- відсортувати його за спаданням за monthDuration
+let spad = coursesAndDurationArray.sort((b,a) => (b.monthDuration - a.monthDuration))
+console.log(spad)
+
 // -- відфільтрувати , залишивши тільки курси з тривалістю більше 5 місяців
+let filt = coursesAndDurationArray.filter((value) =>{
+    return value.monthDuration > 5;
+});
+console.log(filt)
