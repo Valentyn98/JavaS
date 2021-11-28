@@ -235,7 +235,7 @@ console.log(prinsessi)
 // ***********************************************************AD********AD************ADDD***********************************************************
 // - Створити клас або функцію конструктор, за допомоги якої можна створювати об'єкти наступного вигляду.
 // Конструктор повинен приймати значення для кожної властивості, в т.ч і для властивостей внутрішніх об'єктів
-function Infous (id,name,username,email,adr ,phone,website) {
+function Infous (id,name,username,email,adr ,phone,website,comp) {
     this.id = id;
     this.name = name;
     this.username = username;
@@ -243,14 +243,15 @@ function Infous (id,name,username,email,adr ,phone,website) {
     this.adr = adr;
     this.phone = phone;
     this.website = website;
+    this.comp = comp;
 }
     class Adr {
-        constructor(street, suite, city, zipcode, geo) {
+        constructor(street, suite, city, zipcode, geog) {
             this.street = street;
             this.suite = suite;
             this.city = city;
             this.zipcode = zipcode;
-            this.geo = geo;
+            this.geog = geog;
         }
     }
         class Gg {
