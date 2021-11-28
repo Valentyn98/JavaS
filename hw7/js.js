@@ -137,10 +137,11 @@ let auto = new Cars ( 'rol', 'rolrol', 2021, 69, 3)
 auto.drive()
 auto.increaseMaxSpeed (99)
 auto.changeYear (1950)
-auto.addDriver({name : 'Max', age : '9', cars : 'renault',children : 'no'})
+auto.addDriver ('Petya')
 auto.info()
-//
-//
+
+
+
 // - (Те саме, тільки через клас)
 // Створити клас який дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
 // -v- drive () - яка виводить в консоль ``їдемо зі швидкістю ${максимальна швидкість}`
@@ -183,13 +184,46 @@ let vod = new Carss ('Tesla', 'Mask',2021,238,650);
 vod.drive();
 vod.increaseMaxSpeed (222);
 vod.changeYear (22)
-vod.addDriver ({name : 'Max', age : '9', cars : 'renault',children : 'no'})
+vod.addDriver ( 'Max')
 vod.info ();
 
-// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+// v-створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
 // Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
 //     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
 //     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
 
 
-// 1 - Створити функцію конструктор яка дозволяє створювати об'єкти car, з властивостями модель, виробник, рік випуску, максимальна швидкість, об'єм двигуна. додати в об'єкт функції:
+function Popailushki (name, years, foot) {
+    this.name = name;
+    this.years = years;
+    this.foot = foot;
+}
+ let popelisk = [
+     new Popailushki('Olegh', 56, 43),
+     new Popailushki('Tolik', 46, 42),
+     new Popailushki('Nikolya', 56, 41),
+     new Popailushki('Yevgen', 33, 14),
+     new Popailushki('Andry', 59, 40),
+     new Popailushki('Olegh', 56, 41),
+     new Popailushki('julia', 76, 43),
+     new Popailushki('Olegh', 56, 43),
+     new Popailushki('Olegh', 66, 23),
+     new Popailushki('Vitka', 56, 43),
+ ]
+console.log(popelisk);
+
+function Prince (name, years, tyflya) {
+    this.name = name;
+    this.years = years;
+    this.tyflya = tyflya;
+}
+ let blackp = new Prince ('Vitya',20,43)
+ let loveordie = (popelisk, blackp) =>{
+    for ( let person of popelisk){
+        if (person.foot === blackp.tyflya){
+            console.log(`tvoya princeska ${person.name}`)
+        }
+    }
+ }
+loveordie (popelisk, blackp)
+
