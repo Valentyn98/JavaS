@@ -36,7 +36,7 @@ for ( const chanFon of setcolorf){
 // -6- змініть кожному елементу колір тексту на синій
 let setcolor = document.getElementsByTagName("body")
 let changefont = setcolor[0]
-changefon.style.color = 'blue'
+changefont.style.color = 'blue'
 // -7- отримати весь список класів елемента з id=rules і вивести їх в console.log
 let targ = document.getElementById('rules')
     console.log(targ)
