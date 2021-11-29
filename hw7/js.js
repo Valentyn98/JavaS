@@ -299,12 +299,12 @@ console.log(infouser)
 // }
 
 function Tgs (option, titlet){
-    this.name = option;
-    this.name = titlet;
+    this.option = option;
+    this.titlet = titlet;
 }
         class Ttletag {
             constructor(titleoftag,action,attrs) {
-                this.titleoftag = titleofTag;
+                this.titleoftag = titleoftag;
                 this.action = action;
                 this.attrs = attrs;
             }
@@ -316,6 +316,7 @@ function Tgs (option, titlet){
                 this.actionOfattr = actionofattr;
             }
         }
+
 
 
 
