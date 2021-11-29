@@ -31,9 +31,8 @@ let setcolorf = document.getElementsByTagName("body")
 //АБО
 for ( const chanFon of setcolorf){
     chanFon.style.background = 'red'
-}АБО
+}
 
-//
 // -6- змініть кожному елементу колір тексту на синій
 let setcolor = document.getElementsByTagName("body")
 let changefont = setcolor[0]
@@ -46,5 +45,6 @@ let fcrls = document.getElementsByClassName('fc_rules')
 for ( const changesRul of fcrls){
     changesRul.style.color = 'red'
 }
+
 
 
