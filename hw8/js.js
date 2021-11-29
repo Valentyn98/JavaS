@@ -25,10 +25,26 @@ let rerules = document.getElementById('rules')
 rerules.innerText='new text rules'
 console.log(rerules)
 // -5- змініть кожному елементу колір фону на червоний
+let setcolorf = document.getElementsByTagName("body")
+// let changefon = setcolorf[0]
+// changefon.style.background = 'red'
+//АБО
+for ( const chanFon of setcolorf){
+    chanFon.style.background = 'red'
+}АБО
+
+//
+// -6- змініть кожному елементу колір тексту на синій
 let setcolor = document.getElementsByTagName("body")
-setcolor.style.color = 'red'
-console.log(setcolor)
-
-
+let changefont = setcolor[0]
+changefon.style.color = 'blue'
+// -7- отримати весь список класів елемента з id=rules і вивести їх в console.log
+let targ = document.getElementById('rules')
+    console.log(targ)
+// -8- поміняти колір тексту у всіх елементів fc_rules на червоний
+let fcrls = document.getElementsByClassName('fc_rules')
+for ( const changesRul of fcrls){
+    changesRul.style.color = 'red'
+}
 
 
