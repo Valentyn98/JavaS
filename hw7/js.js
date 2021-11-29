@@ -298,6 +298,31 @@ console.log(infouser)
 // }
 // }
 
+function Tgs (option, titlet){
+    this.name = option;
+    this.name = titlet;
+}
+        class Ttletag {
+            constructor(titleoftag,action,attrs) {
+                this.titleoftag = titleofTag;
+                this.action = action;
+                this.attrs = attrs;
+            }
+    }
+
+        class Functhistag{
+            constructor(titleofatr,actionofattr ) {
+                this.titleofatr = titleofatr;
+                this.actionOfattr = actionofattr;
+            }
+        }
+
+
+
+let attrs = new  Functhistag('disabled','Указывает, что данный элемент списка должен быть выключен')
+let titlet = new Ttletag('option','используется для указания вариантов ответа, которые может выбрать посетитель сайта', attrs)
+let nametags = new Tgs('option', titlet )
+console.log(nametags)
 // -  Створити функцію конструктор / клас  який описує об'єкт тегу
 // Поля :
 //     -назва тегу ()
