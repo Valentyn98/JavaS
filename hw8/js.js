@@ -24,14 +24,24 @@ console.log(recontent)
 let rerules = document.getElementById('rules')
 rerules.innerText='new text rules'
 console.log(rerules)
+
+
+
 // -5- змініть кожному елементу колір фону на червоний
 let setcolorf = document.getElementsByTagName("body")
 // let changefon = setcolorf[0]
 // changefon.style.background = 'red'
 //АБО
+
 for ( const chanFon of setcolorf){
     chanFon.style.background = 'red'
 }
+//АБО
+
+// let ditu  = document.body.children
+// for (const di of ditu ){
+//     di.style.background = 'red'
+// }
 
 // -6- змініть кожному елементу колір тексту на синій
 let setcolor = document.getElementsByTagName("body")
