@@ -12,10 +12,10 @@
 
 // -1- отримує текст з параграфа з id "content"
 let content = document.getElementById('content')
-console.log(content);
+console.log(content.innerText);
 // -2- отримує текст з блоку з id "rules"
 let rules = document.getElementById('rules')
-console.log(rules)
+console.log(rules.innerText)
 // -3- замініть текст параграфа з id 'content' на будь-який інший
 let recontent = document.getElementById('content')
 recontent.innerText='new text content';
