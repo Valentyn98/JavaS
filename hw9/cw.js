@@ -37,11 +37,84 @@ let simpsons = [
     },
 ];
 // Проітерувати його, створиши для кожного елементу масиву <div class='member'>.
+// for ( const elSim of simpsons){
+//     let blname = document.createElement('div')
+//     document.body.appendChild(blname)
+//     blname.innerText = elSim.name;
+//     blname.classList.add('member')
 //
+//     let blsurname = document.createElement('div')
+//     document.body.appendChild(blsurname)
+//     blsurname.innerText = elSim.surname;
+//     blsurname.classList.add('member')
 //
+//     let blage = document.createElement('div')
+//     document.body.appendChild(blage)
+//     blage.innerText = elSim.age;
+//     blage.classList.add('member')
+//
+//     let blifo = document.createElement('div')
+//     document.body.appendChild(blifo)
+//     blifo.innerText = elSim.info;
+//     blifo.classList.add('member')
+//
+//     let blfoto = document.createElement('div')
+//     document.body.appendChild(blfoto)
+//     blfoto.innerText = elSim.photo;
+//     blfoto.classList.add('member')
+// }
 // - взяти попередній масив з сімпсонами.
 //     Проітерувати його, створиши для кожного елементу масиву <div class='member'>. Для кожної властивості елементу створити окремий блок, та помістити його у div.member
-//
+for ( const elSim of simpsons){
+    let blname = document.createElement('div')
+    document.body.appendChild(blname)
+    let blnamec = document.createElement('div')
+    blname.appendChild(blnamec)
+    blnamec.innerText = elSim.name;
+    blname.classList.add('member')
+
+
+
+    let blsurname = document.createElement('div')
+    document.body.appendChild(blsurname)
+    let blnamech = document.createElement('div')
+    blsurname.appendChild(blnamech)
+    blnamech.innerText = elSim.surname;
+    blsurname.classList.add('member')
+
+
+    let blage = document.createElement('div')
+    document.body.appendChild(blage)
+    let blnamechi = document.createElement('div')
+    blage.appendChild(blnamechi)
+    blnamechi.innerText = elSim.age;
+    blage.classList.add('member')
+
+
+    let blifo = document.createElement('div')
+    document.body.appendChild(blifo)
+    let blnamechil = document.createElement('div')
+    blifo.appendChild(blnamechil)
+    blnamechil.innerText = elSim.info;
+    blifo.classList.add('member')
+
+
+    let blfoto = document.createElement('div')
+    document.body.appendChild(blfoto)
+    let blnamechild = document.createElement('div')
+    blfoto.appendChild(blnamechild)
+    blnamechild.innerText = elSim.photo;
+    blfoto.classList.add('member')
+
+
+}
+
+// *********************************************************************************************
+// *********************************************************************************************
+// *********************************************************************************************
+// *********************************************************************************************
+// *********************************************************************************************
+
 // - Є масив
 let coursesArray = [
     {
@@ -112,5 +185,50 @@ let coursesArray = [
         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
     }
 ];
-// Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
+// Створити для кожного елементу масиву свій блокv, блок розділити блокамиv, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png
+//for ( const elArr of coursesArray){
+//     let blockForelArr = document.createElement('div')
+//     document.body.appendChild(blockForelArr)
+//     blockForelArr.classList.add('main-div')
+//     blockForelArr.style.fontSize = '30px'
+//     blockForelArr.style.background = 'pink'
+//     blockForelArr.style.width = '1400px'
+//     blockForelArr.style.display = 'flex'
+//     blockForelArr.style.flexDirection = 'column'
+//
+//     let blockFortitle = document.createElement('div')
+//     blockFortitle.classList.add('ortitle')
+//     blockForelArr.appendChild(blockFortitle)
+//     blockFortitle.innerText = elArr.title;
+//     // blockFortitle.style.width = '100%'
+//
+//     let fatForDuration = document.createElement('div')
+//     blockForelArr.appendChild(fatForDuration)
+//     fatForDuration.style.display = 'flex'
+//
+//     let blockFormonthDuration = document.createElement('div')
+//     blockFormonthDuration.classList.add('ormonthDuration')
+//     fatForDuration.appendChild(blockFormonthDuration)
+//     blockFormonthDuration.innerText = elArr.monthDuration;
+//     blockFormonthDuration.style.width = '160px'
+//     blockFormonthDuration.style.height = '60px'
+//
+//     let blockForhourDuration = document.createElement('div')
+//     blockForhourDuration.classList.add('orhourDuration')
+//     fatForDuration.appendChild(blockForhourDuration)
+//     blockForhourDuration.innerText = elArr.hourDuration;
+//     blockForhourDuration.style.width = '160px'
+//     blockForhourDuration.style.height = '60px'
+//
+//     let blockFormodules = document.createElement('div')
+//     blockFormodules.classList.add('ormodules')
+//     blockForelArr.appendChild(blockFormodules)
+//     // blockFormodules.innerText = elArr.modules
+//
+//     for ( const modElem of elArr.modules){
+//         let blockElemMod = document.createElement('div')
+//         blockFormodules.appendChild(blockElemMod)
+//         blockElemMod.innerText = modElem
+//     }
+// }

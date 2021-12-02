@@ -122,7 +122,6 @@ for (const types of arr3){
         crH1.innerText = types.title
         box.appendChild(crH1)
 
-
         let pElement = document.createElement('p')
         pElement.classList.add('description')
         pElement.innerText = types.monthDuration
