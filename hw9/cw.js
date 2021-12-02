@@ -99,13 +99,19 @@ for ( const elSim of simpsons){
     blifo.classList.add('member')
 
 
-    let blfoto = document.createElement('div')
-    document.body.appendChild(blfoto)
-    let blnamechild = document.createElement('img')
-    blfoto.appendChild(blnamechild)
-    blnamechild.innerHTML = elSim.photo;
-    blfoto.classList.add('member')
+    // let blfoto = document.createElement('div')
+    // document.body.appendChild(blfoto)
+    // let blnamechild = document.createElement('img')
+    // blfoto.appendChild(blnamechild)
+    // blnamechild.innerHTML = elSim.photo;
+    // blfoto.classList.add('member')
 
+    let blfoto = document.createElement('div');
+    blfoto = document.body.appendChild(blfoto);
+    let blnamechild = document.createElement('img');
+    blnamechild.src = elSim.photo ;
+    blnamechild.alt = 'This photo';
+    blfoto.appendChild(blnamechild);
 
 }
 
