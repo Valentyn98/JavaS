@@ -101,9 +101,9 @@ for ( const elSim of simpsons){
 
     let blfoto = document.createElement('div')
     document.body.appendChild(blfoto)
-    let blnamechild = document.createElement('div')
+    let blnamechild = document.createElement('img')
     blfoto.appendChild(blnamechild)
-    blnamechild.innerText = elSim.photo;
+    blnamechild.innerHTML = elSim.photo;
     blfoto.classList.add('member')
 
 

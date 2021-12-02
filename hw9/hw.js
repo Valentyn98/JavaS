@@ -98,7 +98,6 @@ for (const types of arr2){
         box.style.width= '100px'
     // }
 }
-
 // - Є масив
 let arr3 = [
     {title: 'JavaScript Complex', monthDuration: 5},
