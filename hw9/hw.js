@@ -112,17 +112,22 @@ let arr3 = [
 //     Завдання робити через цикли.
 
 for (const types of arr3){
-    for (const ftypes in  types){
-        let boxx = document.createElement('div')
-        document.body.appendChild(boxx)
-        let h1 = document.createElement('h1')
-        let pi = document.createElement('p')
-        document.div.appendChild('h1')
-        document.h1.appendChild('pi')
-        document.pi.appendChild(types[ftypes])
-        // box.innerText = types[ftypes];
 
-    }
+        let box = document.createElement('div')
+        document.body.appendChild(box)
+        box.classList.add('item')
+
+        let crH1 = document.createElement('h1')
+        crH1.classList.add('heading')
+        crH1.innerText = types.title
+        box.appendChild(crH1)
+
+
+        let pElement = document.createElement('p')
+        pElement.classList.add('description')
+        pElement.innerText = types.monthDuration
+        box.appendChild(pElement)
+
 }
 
 
