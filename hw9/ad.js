@@ -1,4 +1,4 @@
-- Є масив :
+// - Є масив :
 
     let usersList = [
         {
@@ -234,3 +234,66 @@
     ];
 
 // Створити під кожен елемент окремий блок. В цьому блоці, під кожну властивість, та властивості внутрішніх об'єктів створити свої окремі блок.
+for (const obUser of usersList) {
+    let fathBlock = document.createElement('div')
+    document.body.appendChild(fathBlock)
+        let id = document.createElement('div')
+        fathBlock.appendChild(id)
+        id.classList = 'id'
+        id.innerText = obUser.id
+
+    let name = document.createElement('div')
+    fathBlock.appendChild(name)
+    name.classList = 'name'
+    name.innerText = obUser.name
+
+    let username = document.createElement('div')
+    fathBlock.appendChild(username)
+    username.classList = 'username'
+    username.innerText = obUser.username
+
+    let email = document.createElement('div')
+    fathBlock.appendChild(email)
+    email.classList = 'email'
+    email.innerText = obUser.email
+
+    let address = document.createElement('div')
+    fathBlock.appendChild(address)
+    address.classList = 'address'
+    // address.innerText = obUser.address
+
+        for ( let child in obUser){
+            let street = document.createElement('div')
+            address.appendChild(street)
+            street.classList = 'street'
+            street.innerText = child.street
+
+            let suite = document.createElement('div')
+            address.appendChild(suite)
+            suite.classList = 'suite'
+            suite.innerText = 'address'
+
+            let city = document.createElement('div')
+            address.appendChild(city)
+            city.classList = 'city'
+            city.innerText = 'address'
+
+            let zipcode = document.createElement('div')
+            address.appendChild(zipcode)
+            zipcode.classList = 'zipcode'
+            zipcode.innerText = 'address'
+        }
+
+    let phone = document.createElement('div')
+    fathBlock.appendChild(phone)
+    phone.classList = 'phone'
+    phone.innerText = obUser.phone
+
+    let website = document.createElement('div')
+    fathBlock.appendChild(website)
+    website.classList = 'website'
+    website.innerText = obUser.website
+
+
+}
+
