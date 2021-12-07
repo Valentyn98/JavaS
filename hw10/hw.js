@@ -61,12 +61,12 @@ document.getElementById('button1').onclick = function (){
 }
 
 // -4 Создайте меню, которое раскрывается/сворачивается при клике
-// let menu = document.getElementsByClassName('menumenu')[0]
-// let butm = document.getElementById('but_menu')
-//
-// butm.addEventListener('click', function (){
-//     menu.classList.toggle('menumenu');
-// })
+let menu = document.getElementsByClassName('menumenu')[0]
+let butm = document.getElementById('but_menu')
+
+butm.addEventListener('click', function (){
+    menu.classList.toggle('menumenu');
+})
 
 // 5- Создать список комментариев , пример объекта коментария - {title : 'lorem', body:'lorem ipsum dolo sit ameti'}.-->
 //     Вывести список комментариев в документ, каждый в своем блоке.-->
