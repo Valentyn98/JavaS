@@ -157,6 +157,9 @@
 //***********************ADDITIONAL*************************
 //***********************ADDITIONAL*************************
 //***********************ADDITIONAL*************************
+// 1- Описати скріпт, котрий, якщо доєднати до будь-якої сторінки дозволить зробити наступне:
+//     При лівому кліку миші вивести в консоль інформацію про блок або елемент на який відбувся клік.
+//     Інформація яку потрібно вивести: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
 
 // document.body.onclick = function (event){
 
@@ -166,7 +169,11 @@
 
 
 
-//2
+//2- Описати скріпт, котрий, якщо доєднати до будь-якої сторінки дозволить зробити наступне:
+// При лівому кліку миші  зробить popup (спливаючий блок) в якому буде вся інформація про блок.
+// Інформація яку потрібно вивести в popup: Назва тегу, список класів, список ід, розміри в форматі висота*ширина
+
+
 // document.body.onclick = function (event){
 // let block = document.getElementsByClassName('bck')[0]
 // block.classList.toggle('none')
@@ -215,45 +222,45 @@ let usersWithAddress = [
 
 // }
 // isChecked (usersWithAddress)
-function f (){
-  
 
-
-
-
-let stat = document.getElementById('stat')
-let ag = document.getElementById('ag')
-let ccity = document.getElementById('city')
-
-
-stat.addEventListener('click', function(){
-  for(let filtone of usersWithAddress ){
-    if(filtone.status !== false){
-
-    }
-  }
-})
-
-ag.addEventListener('click', function(){
-  for (let filtwo of usersWithAddress){
-    if(filtwo.age > 29){
-
-    }
-  }
-})
-
-ccity.addEventListener('click', function(){
-  for (let fitthre of usersWithAddress){
-      for (let keys in fitthre.address){
-        if(fitthre.address[keys] === 'Kyiv'){
-          return fitthre
-        }
-      }
-  }
-})
-}
-
-f ()
+// function f (){
+//
+// let stat = document.getElementById('stat')
+// let ag = document.getElementById('ag')
+// let ccity = document.getElementById('city')
+//
+//
+// stat.addEventListener('click', function(){
+//   for(let filtone of usersWithAddress ){
+//     if(filtone.status !== false){
+//
+//     }
+//   }
+// })
+//
+// ag.addEventListener('click', function(){
+//   for (let filtwo of usersWithAddress){
+//     if(filtwo.age > 29){
+//
+//     }
+//   }
+// })
+//
+// ccity.addEventListener('click', function(){
+//   for (let fitthre of usersWithAddress){
+//       for (let keys in fitthre.address){
+//         if(fitthre.address[keys] === 'Kyiv'){
+//           return fitthre
+//         }
+//       }
+//   }
+// })
+// }
+//
+// f ()
 // if (fitthre.city = 'Kyiv'){
 //   console.log(fitthre)
 // }
+
+
+
