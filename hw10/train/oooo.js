@@ -211,8 +211,6 @@ let usersWithAddress = [
 ]
 
 
-
-
 // function isChecked (usersWithAddress) {
 //  if(document.getElementById('stat').checked){
 //    for ( let firstsort of usersWithAddress){
@@ -261,6 +259,9 @@ let usersWithAddress = [
 // if (fitthre.city = 'Kyiv'){
 //   console.log(fitthre)
 // }
+
+
+
 
 
 
