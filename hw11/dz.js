@@ -27,8 +27,6 @@ let model = document.getElementById('mod')
 let type = document.getElementById('typ')
 let volume = document.getElementById('vol')
 let bbb = document.getElementById('b')
-let k = 'key';
-let arr = []
 let pushArr = (model,type,volume) => {
     let objtwo = {
                 model : model,
@@ -36,14 +34,13 @@ let pushArr = (model,type,volume) => {
                 volume:volume
                 }
 
-                let c = JSON.parse(localStorage.getItem('c')) || []
+    let c = JSON.parse(localStorage.getItem('c')) || []
     c.push(objtwo)
     localStorage.setItem('c',JSON.stringify(c))
 }
 bbb.onclick = (e) => {
     e.preventDefault()
     pushArr (model.value,type.value,volume.value)
-    console.log(clicks)
 
 }
 
