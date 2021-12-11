@@ -41,61 +41,127 @@
 // Всі характеристики повинні мати свої блоки всередені div.comment
 // https://jsonplaceholder.typicode.com/comments
 
-fetch('https://jsonplaceholder.typicode.com/comments')
-.then(function (res){
-    let xBet = res.json();
-    return xBet;
-}).then(ous =>{
-let blComm = document.createElement('div')
-    document.body.appendChild(blComm)
-    blComm.classList.add('blComm')
-    for (let ui of ous){
-
-        let korner = document.createElement('div')
-        korner.classList.add('kornik')
-        blComm.appendChild(korner)
-
-        let chPost  = document.createElement('div')
-        korner.appendChild(chPost)
-        chPost.classList.add('chPost')
-
-        let chId = document.createElement('div')
-        korner.appendChild(chId)
-        chId.classList.add('chId')
-
-        let chName = document.createElement('div')
-        korner.appendChild(chName)
-        chName.classList.add('chName')
-
-        let a = document.createElement('a')
-        a.setAttribute('href', '#');
-        korner.appendChild(a)
-        a.classList.add('a')
-
-        let chEmail = document.createElement('div')
-        a.appendChild(chEmail)
-        chEmail.classList.add('chEmail')
-
-        let chBody = document.createElement('div')
-        korner.appendChild(chBody)
-        chBody.classList.add('chBody')
-
-
-
-        chPost.innerText = `postID: ${ui.postId}`
-        chId.innerText = `id: ${ui.id}`
-        chName.innerText = `${ui.name}`
-        chEmail.innerText = `email: ${ui.email}`
-        chBody.innerText = `body: ${ui.body}`
-    }
-})
+// fetch('https://jsonplaceholder.typicode.com/comments')
+// .then(function (res){
+//     let xBet = res.json();
+//     return xBet;
+// }).then(ous =>{
+// let blComm = document.createElement('div')
+//     document.body.appendChild(blComm)
+//     blComm.classList.add('blComm')
+//     for (let ui of ous){
+//
+//         let korner = document.createElement('div')
+//         korner.classList.add('kornik')
+//         blComm.appendChild(korner)
+//
+//         let chPost  = document.createElement('div')
+//         korner.appendChild(chPost)
+//         chPost.classList.add('chPost')
+//
+//         let chId = document.createElement('div')
+//         korner.appendChild(chId)
+//         chId.classList.add('chId')
+//
+//         let chName = document.createElement('div')
+//         korner.appendChild(chName)
+//         chName.classList.add('chName')
+//
+//         let a = document.createElement('a')
+//         a.setAttribute('href', '#');
+//         korner.appendChild(a)
+//         a.classList.add('a')
+//
+//         let chEmail = document.createElement('div')
+//         a.appendChild(chEmail)
+//         chEmail.classList.add('chEmail')
+//
+//         let chBody = document.createElement('div')
+//         korner.appendChild(chBody)
+//         chBody.classList.add('chBody')
+//
+//
+//
+//         chPost.innerText = `postID: ${ui.postId}`
+//         chId.innerText = `id: ${ui.id}`
+//         chName.innerText = `${ui.name}`
+//         chEmail.innerText = `email: ${ui.email}`
+//         chBody.innerText = `body: ${ui.body}`
+//     }
+// })
 
 // *********************************************************CWW
 // *********************************************************CWW
 // *********************************************************CWW
 // *********************************************************CWW
+
+
+
+
 
 // 1.
 // Отримати відповідь з цього ресурсу відповідь, та вивести в документ як в прикладі на занятті
 // https://jsonplaceholder.typicode.com/posts
 //     зробити кнопку до кожного поста. при кліку на яку виводяться в окремий блок всі коментарі поточного поста
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then(function (classw){
+        let nyiny = classw.json();
+        return nyiny;
+    }).then(lop =>{
+    let wrap = document.createElement('div')
+    document.body.appendChild( wrap)
+    wrap.classList.add('wrap')
+
+    for (let tap of lop) {
+        let block = document.createElement('div')
+        wrap.appendChild(block)
+
+        let chPos = document.createElement('div')
+        block.appendChild(chPos)
+        chPos.classList.add('chPos')
+
+        let chI = document.createElement('div')
+        block.appendChild(chI)
+        chI.classList.add('chI')
+
+        let chTit = document.createElement('div')
+        block.appendChild(chTit)
+        chTit .classList.add('chTit')
+
+        let chBod = document.createElement('div')
+        block.appendChild(chBod)
+        chBod.classList.add('chBod')
+
+        chPos.innerText = `postID: ${tap.userId}`
+        chI.innerText = `id: ${tap.id}`
+        chTit.innerText = `${tap.title}`
+            chBod.innerText = `body: ${tap.body}`
+
+        let but = document.createElement('button')
+        block.appendChild(but)
+        but.onclick = () => {
+            fetch('https://jsonplaceholder.typicode.com/comments')
+                .then(function (res){
+                    let xBet = res.json();
+                    return xBet;
+                }).then(ous =>{
+                for (let comment of ous){
+                    if(tap.id === comment.id) {
+                        let korner = document.createElement('div')
+                        korner.classList.add('kornik')
+                        block.append(korner)
+                        korner.innerHTML = `
+                                        <h3>ID: ${comment.id}</h3>
+                                      <h4>Name: ${comment.name}</h4>
+                                     <h5>Email: ${comment.email}</h5>
+                                     <h6>Body: ${comment.body}</h6>                                 
+                                        `
+
+                    }
+                    but.disabled = true;
+                }
+            })
+
+        }
+    }
+})
