@@ -10,12 +10,20 @@
 
 
 .kornik{
-    width: 250px;
-    height: 260px;
+    width: 300px;
+    height: 280px;
+    margin: 0px 30px;
 }
 
 .chPost{
     font-weight: bold;
+}
+.blComm{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 .chId{
     border: 1px solid black;
@@ -38,3 +46,5 @@
 .chEmail{
     margin: 10px 0px;
 }
+
+/***********************************************************CW*/
