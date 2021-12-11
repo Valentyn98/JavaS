@@ -7,3 +7,34 @@
 .mom{
     width: 20%;
 }
+
+
+.kornik{
+    width: 250px;
+    height: 260px;
+}
+
+.chPost{
+    font-weight: bold;
+}
+.chId{
+    border: 1px solid black;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px 0px 10px 0px;
+}
+.chName{
+    text-transform: uppercase;
+    line-height: 20px;
+    text-align: center;
+}
+.a{
+    cursor: pointer;
+    text-decoration: none;
+    color: cornflowerblue;
+    text-align: center;
+
+}
+.chEmail{
+    margin: 10px 0px;
+}
