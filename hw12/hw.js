@@ -150,13 +150,18 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                         let korner = document.createElement('div')
                         korner.classList.add('kornik')
                         block.append(korner)
-                        korner.innerHTML = `
-                                        <h3>ID: ${comment.id}</h3>
-                                      <h4>Name: ${comment.name}</h4>
-                                     <h5>Email: ${comment.email}</h5>
-                                     <h6>Body: ${comment.body}</h6>                                 
-                                        `
-
+                        let a = document.createElement('div')
+                        korner.appendChild(a)
+                        a.innerText = `ID: ${comment.id}`
+                        let b=document.createElement('div')
+                        korner.appendChild(b)
+                        b.innerText = `${comment.name}`
+                        let c=document.createElement('div')
+                        korner.appendChild(c)
+                        c.innerText = `${comment.email}`
+                        let d =document.createElement('div')
+                        korner.appendChild(d)
+                        d.innerText = ` ${comment.body}`
                     }
                     but.disabled = true;
                 }
