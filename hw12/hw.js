@@ -321,6 +321,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
                         d.innerText = ` ${comment.body}`
                     }
                     butt.disabled = true;
+
                 }
             })
 
@@ -329,6 +330,7 @@ fetch('https://jsonplaceholder.typicode.com/posts')
         }
     }
 })
+            but.disabled = true;
         }
 }
 
