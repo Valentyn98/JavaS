@@ -1,5 +1,5 @@
 let done = 0;
-
+let count = 100
 let doit = 11;
 function wakeUp (wake){
     setTimeout  (() =>{
@@ -11,7 +11,8 @@ function wakeUp (wake){
         }
     },4000)
 }
-wakeUp (true )
+
+
 function glassOfWat (glass){
     setTimeout(() =>{
         if (glass){
@@ -22,17 +23,36 @@ function glassOfWat (glass){
         }
     },2000)
 }
-glassOfWat (true)
+
+
 function makeAPlan (doit){
     setTimeout(()=>{
-        if (doit > done){
+        if (doit < done){
             done += 25;
             console.log(done)
 
         }
     },3000)
 }
- makeAPlan (doit)
+
+
+function makeASports (count){
+    setTimeout(()=>{
+        if (done === count){
+
+            console.log('finish')
+
+        }else {
+            done +=25;
+            console.log(done)
+        }
+    },2500)
+}
+wakeUp (true )
+glassOfWat (true)
+makeAPlan (doit)
+makeASports (count)
+
 
 
 
