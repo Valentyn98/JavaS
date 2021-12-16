@@ -35,12 +35,13 @@ for (let item of  items){
         ig.appendChild(butig)
         butig.style.margin = '10px'
         butig.innerText = 'Видалити'
-    //     butig.onclick = () =>{
-    //     localStorage.removeItem(JSON.stringify(`${item.image}`));
-    //     location.reload()
-    // }
+        butig.onclick = () => {
+            butig.onclick = function () {
+                localStorage.removeItem('',);
 
+            }
 
+        }
 }
 
 let fuldel = document.createElement('button')
