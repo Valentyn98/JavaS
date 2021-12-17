@@ -36,21 +36,31 @@ function myNextDay(nextDayWell){
             }else{
                 reject('not good')
             }
-        },600)
+        },300)
     })
 }
 let heal = 10
 
-
-glassOfWat (true).then(asd =>{
-    console.log(heal)
-
-})
+function makeSport (mkSport){
+    return new Promise((resolve, reject) => {
+        setTimeout(()=>{
+            if(mkSport){
+                resolve('make ')
+                console.log('make sport')
+            }
+        },1100)
+    })
+}
 sleep(true).then(well =>{
     console.log('spit ok')
     return myNextDay(true)
 
 })
+glassOfWat (true).then(asd =>{
+    console.log('drink wat ')
+   return  makeSport (true)
+})
+
 
 
 
