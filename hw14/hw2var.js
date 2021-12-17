@@ -1,15 +1,5 @@
 
-function myNextDay(nextDayWell){
-    return new Promise((resolve, reject) => {
-        setTimeout(() =>{
-            if (nextDayWell){
-                resolve('good day')
-            }else{
-                reject('not good')
-            }
-        },500)
-    })
-}
+
 
 
 function sleep (sleep){
@@ -21,12 +11,33 @@ function sleep (sleep){
             }else {
                 reject('ne mogu');
             }
-        },500)
+        },100)
+    })
+}
+
+function myNextDay(nextDayWell){
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            if (nextDayWell){
+                resolve('good day')
+                console.log('good day')
+            }else{
+                reject('not good')
+            }
+        },2000)
     })
 }
 
 sleep(sleep).then(well =>{
     console.log(well)
     return sleep(true)
+
 })
+
+myNextDay(sleep).then(sleep =>{
+    if (sleep === true)
+        return myNextDay(true)
+
+})
+
 
