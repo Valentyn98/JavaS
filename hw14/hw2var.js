@@ -11,23 +11,10 @@ function sleep (sleep){
             }else {
                 reject('ne mogu');
             }
-        },200)
+        },800)
     })
 }
 
-function myNextDay(nextDayWell){
-    return new Promise((resolve, reject) => {
-        setTimeout(() =>{
-            if (nextDayWell){
-                resolve('good day')
-                console.log('good day')
-            }else{
-                reject('not good')
-            }
-        },900)
-    })
-}
-let heal = 10
 
 function glassOfWat (glass){
     return new Promise((resolve, reject) => {
@@ -40,6 +27,25 @@ function glassOfWat (glass){
 }
 
 
+function myNextDay(nextDayWell){
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            if (nextDayWell){
+                resolve('good day')
+                console.log('good day')
+            }else{
+                reject('not good')
+            }
+        },600)
+    })
+}
+let heal = 10
+
+
+glassOfWat (true).then(asd =>{
+    console.log(heal)
+
+})
 sleep(true).then(well =>{
     console.log('spit ok')
     return myNextDay(true)
@@ -47,11 +53,7 @@ sleep(true).then(well =>{
 })
 
 
-glassOfWat (true).then(asd =>{
-        console.log(heal)
 
-
-})
 
 
 
