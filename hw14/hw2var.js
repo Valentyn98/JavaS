@@ -11,7 +11,7 @@ function sleep (sleep){
             }else {
                 reject('ne mogu');
             }
-        },100)
+        },2000)
     })
 }
 
@@ -24,20 +24,16 @@ function myNextDay(nextDayWell){
             }else{
                 reject('not good')
             }
-        },2000)
+        },200)
     })
 }
 
-sleep(sleep).then(well =>{
-    console.log(well)
-    return sleep(true)
+sleep(true).then(well =>{
+    console.log('spit ok')
+    return myNextDay(true)
 
 })
 
-myNextDay(sleep).then(sleep =>{
-    if (sleep === true)
-        return myNextDay(true)
 
-})
 
 
