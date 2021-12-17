@@ -11,7 +11,7 @@ function sleep (sleep){
             }else {
                 reject('ne mogu');
             }
-        },2000)
+        },200)
     })
 }
 
@@ -24,9 +24,21 @@ function myNextDay(nextDayWell){
             }else{
                 reject('not good')
             }
-        },200)
+        },900)
     })
 }
+let heal = 10
+
+function glassOfWat (glass){
+    return new Promise((resolve, reject) => {
+        setTimeout(() =>{
+            if(glass){
+                resolve(heal += 10)
+            }
+        },1100)
+    })
+}
+
 
 sleep(true).then(well =>{
     console.log('spit ok')
@@ -34,6 +46,12 @@ sleep(true).then(well =>{
 
 })
 
+
+glassOfWat (true).then(asd =>{
+        console.log(heal)
+
+
+})
 
 
 
