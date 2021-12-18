@@ -21,30 +21,58 @@ let users = JSON.parse(localStorage.getItem('keykey'))
 
 for( let usersEl of users){
     let blockUs = document.createElement('div')
+    wrapUserDet.append(blockUs)
 
     let usId = document.createElement('div')
-    usId.innerText = `${usersEl.id}`
+    usId.innerText =  `id: ${usersEl.id}`
     let usName = document.createElement('div')
-    usName.innerText = `${usersEl.name}`
+    usName.innerText = `name: ${usersEl.name}`
     let usUsername = document.createElement('div')
-    usUsername.innerText = `${usersEl.username}`
+    usUsername.innerText = `username: ${usersEl.username}`
     let usEmail = document.createElement('div')
-    usEmail.innerText = `${usersEl.email}`
-    let blockAddress = document.createElement('div')
+    usEmail.innerText = `email: ${usersEl.email}`
 
 
     for (let addElem in usersEl.address){
 if(usersEl.address[addElem] !== usersEl.address.geo){
      let addElemBlock = document.createElement('div')
-    blockAddress.appendChild(addElemBlock)
+    wrapUserDet.appendChild(addElemBlock)
 
-    let itemAdd = document.createElement('div')
-    addElemBlock.appendChild(itemAdd)
+    let itemAddst = document.createElement('div')
+    addElemBlock.appendChild(itemAddst)
 
-    itemAdd.innerText = `${usersEl.address.street}`//[addElem]
-    }
+    itemAddst.innerText = ` ${addElem} : ${usersEl.address[addElem]}`//[addElem]
 
-    }
-    blockUs.append(usId,usName,usUsername,usEmail,blockAddress)
-    wrapUserDet.append(blockUs)
+
+    }else {
+
+    for (let inpgeo in usersEl.address.geo ){
+        let inpgoeit = document.createElement('div')
+        wrapUserDet.appendChild(inpgoeit)
+
+        inpgoeit.innerText =`${inpgeo} : ${usersEl.address.geo[inpgeo]}`
+     }
 }
+    }
+    let phonWebBlock = document.createElement('div')
+    wrapUserDet.append(phonWebBlock)
+
+    let usUserphone = document.createElement('div')
+    phonWebBlock.appendChild(usUserphone)
+
+    usUserphone.innerText = `${usersEl.phone}`
+
+    let uswebsite = document.createElement('div')
+    phonWebBlock.appendChild(uswebsite)
+
+    uswebsite.innerText = `${usersEl.website}`
+
+    for ( let company in usersEl.company ){
+        let blockComp = document.createElement('div')
+        wrapUserDet.append(blockComp)
+        blockComp.innerText = `${company} : ${usersEl.company[company]}`
+    }
+    blockUs.append(usId,usName,usUsername,usEmail,)
+}
+
+

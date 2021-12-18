@@ -33,7 +33,7 @@ function glassOfWat (glass){
             if(glass){
                 resolve(heal += 10)
             }
-        },1100)
+        },100)
     })
 }
 
