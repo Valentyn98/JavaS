@@ -8,13 +8,28 @@
 // блоки с краткой информацией про post - в ряд по 5 объектов.
 // post-details.html - блок с информацией про пост вверху. Комментарии - по 4 в ряд.
 // Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так, что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
+
+
+let wrap = document.createElement('div')
+document.body.appendChild(wrap)
+wrap.style.width = '100%'
+wrap.style.height = '100%'
+wrap.style.background = '#81d4fa'
+
 let wrapPostDet = document.createElement('div')
-document.body.appendChild(wrapPostDet)
+wrap.appendChild(wrapPostDet)
+wrapPostDet.style.width = '500px'
+wrapPostDet.style.height = '500px auto'
+wrapPostDet.style.margin = '0 auto'
 let posts = JSON.parse(localStorage.getItem('y'))
 
     for ( let takeBlockPost of posts ){
         let b_post = document.createElement('div')
         wrapPostDet.appendChild(b_post)
+        b_post.style.display = 'flex'
+        b_post.style.justifyContent = 'center'
+        b_post.style.alignItems = 'center'
+        b_post.style.flexDirection = 'column'
         b_post.innerHTML = `
         <div class="id"> ${takeBlockPost.id} </div>
         <div class="title"> ${takeBlockPost.title} </div>
@@ -23,6 +38,13 @@ let posts = JSON.parse(localStorage.getItem('y'))
         let showComm = document.createElement('button')
         b_post.appendChild(showComm)
         showComm.innerText = 'Показати всі коменти'
+        showComm.style.border = 'none'
+        showComm.style.width = 'auto'
+        showComm.style.height = '25px'
+        showComm.style.borderRadius = '10px'
+        showComm.style.color = '#777'
+        showComm.style.fontSize = '10px'
+
         showComm.onclick = () =>{
             fetch('https://jsonplaceholder.typicode.com/comments')
                 .then(function (com){

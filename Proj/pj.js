@@ -30,13 +30,41 @@ fetch('https://jsonplaceholder.typicode.com/users')
 
         let wrap = document.createElement('div')
         document.body.appendChild(wrap)
+
+        wrap.style.width = '100%'
+        wrap.style.height = '100%'
+        wrap.style.background = '#81d4fa'
+
+        let child_wrap = document.createElement('div')
+        wrap.appendChild(child_wrap)
+
+        child_wrap.style.width = '600px'
+        child_wrap.style.height = '1025px'
+        child_wrap.style.margin = '0 auto'
+        child_wrap.style.display = 'flex'
+        child_wrap.style.flexWrap = 'wrap'
+        child_wrap.style.alignItems = 'center'
+
         for (let take_obj of func){
             let user_wrap = document.createElement('div')
 
-        user_wrap.innerText = `${take_obj.id} - ${take_obj.name}`
-
+        user_wrap.innerText = `${take_obj.id} : ${take_obj.name}`
+            user_wrap.style.width = '300px'
+            user_wrap.style.height = '30px'
+            user_wrap.style.fontWeight = 'bold'
+            user_wrap.style.fontSize = '20px'
         let but = document.createElement('button')
-            but.innerText = "detail info"
+            but.innerText = "Detail info"
+
+            but.style.border = 'none'
+            but.style.width = '300px'
+            but.style.height = '50px'
+            but.style.borderRadius = '30px'
+            but.style.color = '#777'
+            but.style.fontWeight = 'bold'
+            but.style.fontSize = '20px'
+
+
         but.onclick = () =>{
             document.location.href = 'userDet.html'
             let set = JSON.parse(localStorage.getItem('keykey')) || [];
@@ -45,7 +73,7 @@ fetch('https://jsonplaceholder.typicode.com/users')
             but.disabled = true
         }
 
-        wrap.append(user_wrap,but)
+            child_wrap.append(user_wrap,but)
     }
 
 })
