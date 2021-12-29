@@ -15,28 +15,14 @@
 // post-details.html - блок с информацией про пост вверху. Комментарии - по 4 в ряд.
 // Все без исключения элементы, который характеризируют user,post,comment  визуализировать, так, что бы было видно их блоки (дать задний фон + margin. Иными словами - крайне четкая сетка)
 
-let wrap = document.createElement('div')
-document.body.appendChild(wrap)
-wrap.style.width = '100%'
-wrap.style.height = '100%'
-wrap.style.backgroundColor = '#81d4fa'
-wrap.style.display = 'flex'
 let wrapUserDet = document.createElement('div')
-wrap.appendChild(wrapUserDet)
-wrapUserDet.style.width = '500px'
-wrapUserDet.style.height = '0px auto'
-
-let wrapPost = document.createElement('div')
-wrap.appendChild(wrapPost)
-wrapPost.style.width = '650px'
-wrapPost.style.height = '300px'
-wrapPost.style.lineHeight = '30px'
-wrapPost.style.fontWeight = 'bold'
+document.body.appendChild(wrapUserDet)
 let users = JSON.parse(localStorage.getItem('keykey'))
 
 for( let usersEl of users){
     let blockUs = document.createElement('div')
     wrapUserDet.append(blockUs)
+
     let usId = document.createElement('div')
     usId.innerText =  `id: ${usersEl.id}`
     let usName = document.createElement('div')
@@ -48,23 +34,23 @@ for( let usersEl of users){
 
 
     for (let addElem in usersEl.address){
-if(usersEl.address[addElem] !== usersEl.address.geo){
-     let addElemBlock = document.createElement('div')
-    wrapUserDet.appendChild(addElemBlock)
+        if(usersEl.address[addElem] !== usersEl.address.geo){
+            let addElemBlock = document.createElement('div')
+            wrapUserDet.appendChild(addElemBlock)
 
-    let itemAddst = document.createElement('div')
-    addElemBlock.appendChild(itemAddst)
+            let itemAddst = document.createElement('div')
+            addElemBlock.appendChild(itemAddst)
 
-    itemAddst.innerText = ` ${addElem} : ${usersEl.address[addElem]}`//[addElem]
-    }else {
+            itemAddst.innerText = ` ${addElem} : ${usersEl.address[addElem]}`//[addElem]
+        }else {
 
-    for (let inpgeo in usersEl.address.geo ){
-        let inpgoeit = document.createElement('div')
-        wrapUserDet.appendChild(inpgoeit)
+            for (let inpgeo in usersEl.address.geo ){
+                let inpgoeit = document.createElement('div')
+                wrapUserDet.appendChild(inpgoeit)
 
-        inpgoeit.innerText =`${inpgeo} : ${usersEl.address.geo[inpgeo]}`
-     }
-}
+                inpgoeit.innerText =`${inpgeo} : ${usersEl.address.geo[inpgeo]}`
+            }
+        }
     }
     let phonWebBlock = document.createElement('div')
     wrapUserDet.append(phonWebBlock)
@@ -84,43 +70,26 @@ if(usersEl.address[addElem] !== usersEl.address.geo){
         wrapUserDet.append(blockComp)
         blockComp.innerText = `${company} : ${usersEl.company[company]}`
     }
-    blockUs.append(usId,usName,usUsername,usEmail)
+    blockUs.append(usId,usName,usUsername,usEmail,)
 
     let show_post = document.createElement('button')
     wrapUserDet.appendChild(show_post)
     show_post.innerText = "ПОКАЗУЄ ПОСТ"
-    show_post.style.border = 'none'
-    show_post.style.width = '200px'
-    show_post.style.height = '40px'
-    show_post.style.borderRadius = '30px'
-    show_post.style.color = '#777'
-    show_post.style.fontWeight = 'bold'
-    show_post.style.fontSize = '15px'
+
     show_post.onclick = () =>{
         fetch('https://jsonplaceholder.typicode.com/posts')
             .then(function (post){
                 let take_post = post.json();
                 return take_post;
-        }).then(func =>{
+            }).then(func =>{
             for ( let block_post of func ){
                 if (usersEl.id === block_post.userId){
                     let blo_po = document.createElement('div')
-                    wrapPost.appendChild(blo_po)
-                    blo_po.style.display = 'flex'
-                    blo_po.style.justifyContent = 'space-between'
-
+                    wrapUserDet.appendChild(blo_po)
                     blo_po.innerText = `${block_post.title}`
                     let post_details = document.createElement('button')
                     blo_po.appendChild(post_details)
-
-                    post_details.innerText = 'Post details'
-                    post_details.style.border = 'none'
-                    post_details.style.width = '100px'
-                    post_details.style.height = '20px'
-                    post_details.style.borderRadius = '10px'
-                    post_details.style.color = '#777'
-                    post_details.style.fontSize = '10px'
-
+                    post_details.innerText = 'post_details'
                     post_details.onclick = () =>{
                         document.location.href = "postDet.html"
                         let postDetails = JSON.parse(localStorage.getItem('y')) || []
@@ -158,10 +127,6 @@ butClear.onclick = () =>{
     localStorage.clear()
     location.reload()
 }
-
-
-
-
 
 
 
