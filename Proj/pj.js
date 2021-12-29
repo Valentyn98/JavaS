@@ -36,11 +36,13 @@ fetch('https://jsonplaceholder.typicode.com/users')
         user_wrap.innerText = `${take_obj.id} - ${take_obj.name}`
 
         let but = document.createElement('button')
+            but.innerText = "detail info"
         but.onclick = () =>{
             document.location.href = 'userDet.html'
             let set = JSON.parse(localStorage.getItem('keykey')) || [];
             set.push(take_obj)
             localStorage.setItem('keykey',JSON.stringify(set))
+            but.disabled = true
         }
 
         wrap.append(user_wrap,but)

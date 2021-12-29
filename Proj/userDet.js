@@ -1,7 +1,7 @@
 // На странице user-details.html:
-// 4 Вывести всю, без исключения, информацию про объект user на кнопку/ссылку которого был совершен клик ранее.
-// 5 Добавить кнопку "post of current user", при клике на которую, появляются title всех постов текущего юзера
-// (для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
+// V4 Вывести всю, без исключения, информацию про объект user на кнопку/ссылку которого был совершен клик ранее.
+// v5 Добавить кнопку "post of current user", при клике на которую, появляются title всех постов текущего юзера
+// v(для получения постов используйте эндпоинт https://jsonplaceholder.typicode.com/users/USER_ID/posts)
 // 6 Каждому посту добавить кнопку/ссылку, при клике на которую происходит переход на страницу post-details.html, которая имеет детальную информацию про текущий пост.
 
 // На странице post-details.html:
@@ -42,8 +42,6 @@ if(usersEl.address[addElem] !== usersEl.address.geo){
     addElemBlock.appendChild(itemAddst)
 
     itemAddst.innerText = ` ${addElem} : ${usersEl.address[addElem]}`//[addElem]
-
-
     }else {
 
     for (let inpgeo in usersEl.address.geo ){
@@ -73,6 +71,68 @@ if(usersEl.address[addElem] !== usersEl.address.geo){
         blockComp.innerText = `${company} : ${usersEl.company[company]}`
     }
     blockUs.append(usId,usName,usUsername,usEmail,)
+
+    let show_post = document.createElement('button')
+    wrapUserDet.appendChild(show_post)
+    show_post.innerText = "ПОКАЗУЄ ПОСТ"
+
+    show_post.onclick = () =>{
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then(function (post){
+                let take_post = post.json();
+                return take_post;
+        }).then(func =>{
+            for ( let block_post of func ){
+                if (usersEl.id === block_post.userId){
+                    let blo_po = document.createElement('div')
+                    wrapUserDet.appendChild(blo_po)
+                    blo_po.innerText = `${block_post.title}`
+                    let post_details = document.createElement('button')
+                    blo_po.appendChild(post_details)
+                    post_details.innerText = 'post_details'
+                    post_details.onclick = () =>{
+                        document.location.href = "postDet.html"
+                        let postDetails = JSON.parse(localStorage.getItem('y')) || []
+                        postDetails.push(block_post)
+                        localStorage.setItem('y', (JSON.stringify(postDetails)))
+                    }
+                }
+            }
+        })
+        show_post.disabled = true
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let butClear = document.createElement('button')
+document.body.appendChild(butClear )
+butClear.innerText = 'Чистим'
+butClear.onclick = () =>{
+    localStorage.clear()
+    location.reload()
+}
+
+
+
+
+
+
+
 
 
