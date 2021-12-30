@@ -17,12 +17,13 @@
 
 let wrapUserDet = document.createElement('div')
 document.body.appendChild(wrapUserDet)
+wrapUserDet.classList.add('wrapUserDet')
 let users = JSON.parse(localStorage.getItem('keykey'))
 
 for( let usersEl of users){
     let blockUs = document.createElement('div')
     wrapUserDet.append(blockUs)
-
+    blockUs.classList.add('blockUs')
     let usId = document.createElement('div')
     usId.innerText =  `id: ${usersEl.id}`
     let usName = document.createElement('div')
@@ -75,6 +76,7 @@ for( let usersEl of users){
     let show_post = document.createElement('button')
     wrapUserDet.appendChild(show_post)
     show_post.innerText = "ПОКАЗУЄ ПОСТ"
+    show_post.style.width = '90%'
 
     show_post.onclick = () =>{
         fetch('https://jsonplaceholder.typicode.com/posts')
@@ -86,6 +88,7 @@ for( let usersEl of users){
                 if (usersEl.id === block_post.userId){
                     let blo_po = document.createElement('div')
                     wrapUserDet.appendChild(blo_po)
+                    blo_po.classList.add('blo_po')
                     blo_po.innerText = `${block_post.title}`
                     let post_details = document.createElement('button')
                     blo_po.appendChild(post_details)

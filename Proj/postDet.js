@@ -22,6 +22,7 @@ for ( let takeBlockPost of posts ){
            `
     let showComm = document.createElement('button')
     b_post.appendChild(showComm)
+    showComm.style.width = '90%'
     showComm.innerText = 'Показати всі коменти'
     showComm.onclick = () =>{
         fetch('https://jsonplaceholder.typicode.com/comments')
@@ -29,10 +30,14 @@ for ( let takeBlockPost of posts ){
                 let take = com.json();
                 return take;
             }).then(funcComm => {
+            let comm = document.createElement('div')
+            b_post.appendChild(comm)
+            comm.classList.add('com')
             for (let takeComm of funcComm ){
                 if (takeBlockPost.id === takeComm.postId){
                     let blockComm = document.createElement('div')
-                    b_post.appendChild(blockComm)
+                    blockComm.classList.add('blockComm')
+                    comm.appendChild(blockComm)
                     blockComm.innerHTML = `
                                     <div>${takeComm.postId}</div>
                                     <div>${takeComm.id}</div>
@@ -49,7 +54,7 @@ for ( let takeBlockPost of posts ){
 }
 let butClear = document.createElement('button')
 document.body.appendChild(butClear )
-butClear.innerText = 'Чистим'
+butClear.innerText = 'Clear'
 butClear.onclick = () =>{
     localStorage.clear()
     location.reload()
